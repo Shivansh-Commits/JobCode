@@ -1,0 +1,31 @@
+.header_div{
+    padding: 20px;
+    background-color: black;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+}
+
+.header_text{
+    color: white;
+}
+
+.signout_button{
+    background-color: red;
+    color : white;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-left: 1100px;
+    padding: 10px;
+    height: 45px;
+}
+
+.main_body_div{
+    border: 3px solid black;
+    padding: 15px;
+}
+
+.balance_label{
+
+    font-size: 20px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+}

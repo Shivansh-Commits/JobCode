@@ -26,7 +26,10 @@ if($stmt->execute())
   }
   else
   {
-    echo '<script>alert("USER DOES NOT EXIST")</script>';  
+    echo '<script>
+    alert("USER DOES NOT EXIST");
+    window.location.href="index.html"
+    </script>';  
   }
   
 }
