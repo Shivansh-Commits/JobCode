@@ -22,11 +22,11 @@ if($stmt->execute())
 
   if($result)
   {
-    echo 'EXISTS';
+    echo '<script>window.location.href="home.html"</script>';
   }
   else
   {
-    echo 'DOES NOT EXIST';
+    echo '<script>alert("USER DOES NOT EXIST")</script>';  
   }
   
 }
