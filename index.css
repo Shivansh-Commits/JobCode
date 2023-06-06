@@ -1,0 +1,41 @@
+.header_div{
+    padding: 20px;
+    background-color: black;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header_text{
+    color: white;
+}
+
+.login_form_div{
+    padding : 50px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.input_text_box{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 0.1px;
+    font-size: 20px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input_text_box::placeholder {
+    text-align: center;
+}
+
+.signin_button{
+    width: 150px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+}
+
+.signin_button:hover{
+    background-color: white;
+    color: black;
+}
