@@ -155,3 +155,36 @@ function fetch_transaction()
       return false;
     });
 }
+
+function generate_jobcoin(event)
+{
+  const address = sessionStorage.getItem('address');
+
+    const form = event.target.form;
+    const formData = new FormData(form);
+    formData.append('address',address);
+
+         return fetch("generate_jobcoin.php", {
+          method: "POST",
+          body: formData
+        })
+          .then(function(response) {
+              return response.text(); // Getting the response as text
+          })
+          .then(function(result) {
+           if(result === "1")
+           {
+             alert("Yay! JOB-COINs, generated Successfully")
+           }
+           else
+           {
+             alert("JOB-COIN Not Generated, Try after Some time ");
+           }
+
+          })
+          .catch(function(error) 
+          {
+          console.log("Error:", error);
+          return false;
+          });
+}

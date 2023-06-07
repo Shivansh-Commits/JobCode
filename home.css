@@ -44,17 +44,17 @@
 
 
 .address_label{
-
     font-size: 20px;
     font-family :Verdana, Geneva, Tahoma, sans-serif;
     margin-left : 50px;
+
 }
 
 .address{
-
-    font-size: 20px;
+    font-size: 18px;
     font-family :Verdana, Geneva, Tahoma, sans-serif;
     margin-left : 10px;
+
 }
 
 .balance_label{
@@ -65,7 +65,7 @@
 }
 
 .balance{
-    font-size: 20px;
+    font-size: 18px;
     font-family :Verdana, Geneva, Tahoma, sans-serif;
     margin-left : 10px;
 }
@@ -126,4 +126,48 @@
     font-size: 15px;
     padding: 5px;
     margin-left : 50px;
+}
+
+.generate_jobcoins_div{
+    padding: 15px;
+}
+
+.generate_jobcoin_button{
+    background-color: rgb(0, 0, 0);
+    border:1px solid white;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    color : white;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left : 50px;
+
+}
+
+.generate_jobcoin_button:hover{
+    background-color: white;
+    border:1px solid black;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    color : black;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left : 50px;
+
+}
+
+.generate_jobcoin_input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0.1px;
+    font-size: 18px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: 50px;
+
 }

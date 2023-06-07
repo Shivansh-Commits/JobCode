@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="home.css" />
+        <link rel="stylesheet" type="text/css" href="home.css"/>
         <script src="home.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
@@ -13,6 +13,7 @@
         </div>
         <div style="display: flex;">
             <div>
+
                 <div class="info_div">
                     <label class ="address_label" id="address_label">Address :<label class ="address" id="address"></label> </label> <br/><br/>
                     <label class="balance_label"> Balanace : <label class ="balance" id="balance"></label> </label> <br/><br/>
@@ -23,12 +24,24 @@
                         <input class="to_address" id="to_address" name="to_address" placeholder="Receivers Address " required></input><br/><br/>
                         <input class="amount" id="amount" name="amount" placeholder=" Amount " type="number" required></input><br/><br/>
                         <button class="send_button" type="submit" onclick="send_jobcoin(event)">Send</button>
+                       
                     </form> 
                 </div>
+                <div class="generate_jobcoins_div">
+                    <form>
+                        <label class="send_jobcoin_label"> Generate Job-Coins </label><br/><br/>
+                        
+                        <input class="generate_jobcoin_input" id="generate_jobcoin_input" name="generate_jobcoin_input" placeholder="Generate Jobcoins" required></input><br/><br/> 
+                        <button class="generate_jobcoin_button" onclick="generate_jobcoin(event)">Generate</button><br/>
+                    </form>
+                </div>    
+
             </div>
-            <div style="height: 300px;width: 1000px;">
-                    <canvas id="transactionGraph" style="height:30px;overflow-y: auto; position: relative; "></canvas>
+            <div style="height: 300px;width: 500px;float: right;">
+                <canvas id="transactionGraph" style="height:30px;overflow-y: auto; position: relative; "></canvas>
             </div>
+        </div>
+        
         </div>
         <script>
             setAddress_label();
