@@ -5,11 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "jobcoindb";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Failed to Connect : " . $conn->connect_error);
-}
+$conn = new mysqli($servername, $username, $password, $dbname) or die("Failed to Connect : " . $conn->connect_error);;
 
 $address =  $_POST['address'];
 
@@ -22,14 +18,11 @@ if($stmt->execute())
 
   if($result)
   {
-    echo '<script>window.location.href="home.html"</script>';
+    echo "1";
   }
   else
   {
-    echo '<script>
-    alert("USER DOES NOT EXIST");
-    window.location.href="index.html"
-    </script>';  
+    echo "0";  
   }
   
 }

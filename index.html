@@ -2,20 +2,28 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="index.css" />
-
+        <script src="index.js"></script>
         <div class="header_div">
-            <h3 class="header_text">JobCoin Exchange | Login</h3>
+            <h3 class="header_text">JobCoin Exchange </h3>
         </div>
     </head>
 
     <body>
 
         <div class="login_form_div">
-            <form method="post" action="login.php">
-                <input type="text" class="input_text_box" id ="address" name="address" placeholder="Address"><br/><br/>
-                <button class="signin_button" type="submit">Sign In</button>
+
+            <form id="login_form" method="post" onsubmit="login(event)">
+                <h3 class="div_heading">Login</h3>
+                <input type="text" class="input_text_box" id ="address" name="address" placeholder="Address" required><br/><br/><br/>
+                <button class="signin_button" type="submit">Sign In</button><br/><br/>
+                <button class="new_user_button" type="button" onclick="showInputField()">New User ? </button><br/><br/>
             </form>
-        </div>
+
+                <input id="random_string_input" class="random_string_input"  style="display:none;white-space: nowrap;" placeholder="Input Random String" maxlength="10" required></input>
+                <button id="generate_address_button" class="generate_address_button" style="display:none;" onclick="generate_address()">Get Address</button>
+            
+
+         </div>
         
     </body>
     

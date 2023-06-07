@@ -10,22 +10,120 @@
 }
 
 .signout_button{
-    background-color: red;
+    background-color: rgb(246, 83, 83);
+    border:1px solid white;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
     color : white;
     font-family :Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     margin-left: 1100px;
-    padding: 10px;
-    height: 45px;
+    margin-top: 20px;
+    padding: 5px;
 }
 
-.main_body_div{
-    border: 3px solid black;
+.signout_button:hover{
+    background-color: rgb(184, 4, 4);
+    border:1px solid white;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    color : white;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-left: 1100px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.info_div{
+    margin-top: 20px;
     padding: 15px;
+}
+
+
+.address_label{
+
+    font-size: 20px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    margin-left : 50px;
+}
+
+.address{
+
+    font-size: 20px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    margin-left : 10px;
 }
 
 .balance_label{
 
     font-size: 20px;
     font-family :Verdana, Geneva, Tahoma, sans-serif;
+    margin-left : 50px;
+}
+
+.balance{
+    font-size: 20px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    margin-left : 10px;
+}
+
+.send_coins_div{
+    padding: 15px;
+}
+
+.send_jobcoin_label{
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.to_address{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0.1px;
+    font-size: 18px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.amount{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-width: 0.1px;
+    font-size: 18px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.send_button{
+    background-color: rgb(0, 0, 0);
+    border:1px solid white;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    color : white;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left : 50px;
+}
+
+.send_button:hover{
+    background-color: white;
+    border:1px solid black;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    color : black;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left : 50px;
 }

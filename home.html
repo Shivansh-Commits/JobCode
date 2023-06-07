@@ -3,19 +3,39 @@
     <head>
         <link rel="stylesheet" type="text/css" href="home.css" />
         <script src="home.js"></script>
-
-        <div class="header_div">
-            <h3 class="header_text">JobCoin Exchange | Home </h3>
-            <button class="signout_button" onclick="signout()">Sign out</button>
-        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
-
-        <div class="main_body_div">
-            <label class="balance_label"> Balanace : </label>
+        <div class="header_div">
+            <h3 class="header_text">JobCoin Exchange |  Home </h3>
+            <button class="signout_button" onclick="signout()">Sign out</button>
         </div>
-        
+        <div style="display: flex;">
+            <div>
+                <div class="info_div">
+                    <label class ="address_label" id="address_label">Address :<label class ="address" id="address"></label> </label> <br/><br/>
+                    <label class="balance_label"> Balanace : <label class ="balance" id="balance"></label> </label> <br/><br/>
+                </div>
+                <div class="send_coins_div">
+                    <form method="POST">
+                        <label class="send_jobcoin_label"> Send Job-Coins </label><br/><br/>
+                        <input class="to_address" id="to_address" name="to_address" placeholder="Receivers Address " required></input><br/><br/>
+                        <input class="amount" id="amount" name="amount" placeholder=" Amount " type="number" required></input><br/><br/>
+                        <button class="send_button" type="submit" onclick="send_jobcoin(event)">Send</button>
+                    </form> 
+                </div>
+            </div>
+            <div style="height: 300px;width: 1000px;">
+                    <canvas id="transactionGraph" style="height:30px;overflow-y: auto; position: relative; "></canvas>
+            </div>
+        </div>
+        <script>
+            setAddress_label();
+            setBalance_label();
+            fetch_transaction();
+        </script>
+
     </body>
     
 </html>
