@@ -62,6 +62,11 @@ $to_address =  $_POST['to_address'];
 $amount = $_POST['amount'];
 $from_address = $_POST['from_address'];
 
+$to_address = filter_input(INPUT_POST, 'to_address', FILTER_SANITIZE_STRING);
+$amount = filter_input(INPUT_POST, 'amount', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+$from_address = filter_input(INPUT_POST, 'from_address', FILTER_SANITIZE_STRING);
+
+
 $conn = new mysqli($servername, $username, $password, $dbname) or die("Failed to Connect : " . $conn->connect_error);
 
 $stmt = $conn->prepare("SELECT balance FROM address WHERE address = ?");

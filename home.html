@@ -28,16 +28,15 @@
                     </form> 
                 </div>
                 <div class="generate_jobcoins_div">
-                    <form>
+                    <form method="POST">
                         <label class="send_jobcoin_label"> Generate Job-Coins </label><br/><br/>
-                        
-                        <input class="generate_jobcoin_input" id="generate_jobcoin_input" name="generate_jobcoin_input" placeholder="Generate Jobcoins" required></input><br/><br/> 
-                        <button class="generate_jobcoin_button" onclick="generate_jobcoin(event)">Generate</button><br/>
+                        <input class="generate_jobcoin_input" id="generate_jobcoin_input" name="generate_jobcoin_input" type="number" placeholder="Generate Jobcoins" required></input><br/><br/> 
+                        <button class="generate_jobcoin_button" type="submit" onclick="generate_jobcoin(event)">Generate</button><br/>
                     </form>
                 </div>    
 
             </div>
-            <div style="height: 300px;width: 500px;float: right;">
+            <div style="height: 300px;width: 500px;float: right;position: relative;margin-left: 30px;">
                 <canvas id="transactionGraph" style="height:30px;overflow-y: auto; position: relative; "></canvas>
             </div>
         </div>

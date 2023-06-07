@@ -20,11 +20,11 @@ function setBalance_label()
         body: address
       })
         .then(function(response) {
-          return response.text(); // Get the response as text
+          return response.text(); 
         })
         .then(function(result) {
           if (result != "false") {
-            document.getElementById("balance").innerHTML = result;
+            document.getElementById("balance").innerHTML = result + " JC's";
 
           } else {
             // Handle incorrect data
@@ -65,7 +65,7 @@ function send_jobcoin(event)
           body: formData
         })
           .then(function(response) {
-              return response.text(); // Getting the response as text
+              return response.text(); 
           })
           .then(function(result) {
             if(result === "1")
@@ -143,7 +143,7 @@ function fetch_transaction()
     body: from_address,
   })
     .then(function(response) {
-      return response.json(); // Parse the response as JSON
+      return response.json(); 
     })
     .then(function(data) {
       var amount = data.amounts;
@@ -158,33 +158,46 @@ function fetch_transaction()
 
 function generate_jobcoin(event)
 {
-  const address = sessionStorage.getItem('address');
 
-    const form = event.target.form;
-    const formData = new FormData(form);
+  event.preventDefault();
+  const input = document.getElementById('generate_jobcoin_input').value;
+  if(input == '' || input <= 0)
+  {
+    alert("Incorrect Input, Cannot Generate JobCoins");
+    return false;
+  }
+
+    const address = sessionStorage.getItem('address');
+    var form = event.target.form;
+    var formData = new FormData(form);
     formData.append('address',address);
 
-         return fetch("generate_jobcoin.php", {
-          method: "POST",
-          body: formData
-        })
-          .then(function(response) {
-              return response.text(); // Getting the response as text
-          })
-          .then(function(result) {
-           if(result === "1")
-           {
-             alert("Yay! JOB-COINs, generated Successfully")
-           }
-           else
-           {
-             alert("JOB-COIN Not Generated, Try after Some time ");
-           }
-
-          })
-          .catch(function(error) 
-          {
-          console.log("Error:", error);
-          return false;
-          });
+    return fetch("generate_jobcoin.php",{
+      method: "POST",
+      body: formData
+      })
+      .then(function(response) {
+         return response.text(); 
+       })
+      .then(function(result) {
+        console.log(result);
+        if(result === "true")
+        {
+          alert("YaY!! JOB-COINS Generated");
+          location.reload();
+        }
+        else if(result === "false")
+        {
+          alert("Oops! There Seems to be Some Issue");
+        }
+        else
+        {
+          alert("Something is not right");
+        }
+      })
+      .catch(function(error) 
+      {
+        console.log("Error:", error);
+        return false;
+      });
 }
